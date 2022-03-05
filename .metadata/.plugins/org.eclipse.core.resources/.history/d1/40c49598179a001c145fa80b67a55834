@@ -1,0 +1,18 @@
+package com.bel.training.ims.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.bel.training.ims.model.Product;
+
+@Controller
+public class ProductController {
+	@RequestMapping("/new")
+	public String showNewProductPage(Model model) {
+	    Product product = new Product();
+	    model.addAttribute("product", product);
+	     
+	    return "new_product";
+	}
+}

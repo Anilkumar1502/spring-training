@@ -1,0 +1,10 @@
+package com.bel.training.ims.controller;
+
+public class LoginController {
+
+	@RequestMapping("/")
+	public String viewHomePage() {
+	        
+	    return "index";
+	}
+}

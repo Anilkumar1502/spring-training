@@ -1,0 +1,9 @@
+package com.bel.training.ims.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.bel.training.ims.model.Product;
+
+public interface ProductRepository extends CrudRepository<Product, Long> {
+}
+

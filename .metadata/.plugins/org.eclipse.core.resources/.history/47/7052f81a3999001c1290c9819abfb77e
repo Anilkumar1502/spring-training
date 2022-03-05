@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+   <bean id="book1" class="com.bel.training.spring_code.Book">
+   
+   <constructor-arg value="101" type="int"></constructor-arg>
+   <constructor-arg value="adgj"></constructor-arg>
+   <constructor-arg value="101" type="long"></constructor-arg>
+   </bean>
+
+</beans>

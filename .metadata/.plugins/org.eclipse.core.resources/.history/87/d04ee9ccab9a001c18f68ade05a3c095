@@ -1,0 +1,5 @@
+package com.bel.training.ims.rest;
+
+public class ProductRestController {
+
+}

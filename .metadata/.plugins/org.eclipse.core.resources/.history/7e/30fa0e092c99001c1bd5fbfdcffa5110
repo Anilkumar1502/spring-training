@@ -1,0 +1,6 @@
+package com.bel.training.spring_code;
+
+public class Student{
+	private String a;
+	
+}

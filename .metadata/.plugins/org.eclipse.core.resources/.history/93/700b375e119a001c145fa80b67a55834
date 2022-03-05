@@ -1,0 +1,53 @@
+package com.bel.training.ims.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.bel.training.ims.model.Address;
+import com.bel.training.ims.model.Dealer;
+import com.bel.training.ims.service.LoginService;
+
+@Controller
+public class LoginController {
+
+	@Autowired
+	private LoginService lservice;
+	@RequestMapping("/")
+	public String viewHomePage() {
+	        
+	    return "index";
+	}
+	
+	// Request --> Controller ---> Response(views- jsp)
+		@RequestMapping("/register")
+		public String viewRegisterPage(Model model) {
+			 Dealer dealer = new Dealer();
+			    model.addAttribute("dealer", dealer);
+			      return "register"; //model+view   
+		}
+		// Request --> Controller ---> Service--> UserRepository--> JPA Repository -->
+		// UserRepository-->Service ---> Controller ---> Response(views- jsp)
+		@PostMapping("/saveDealer")
+		public String saveDealer(HttpServletRequest req, @ModelAttribute("dealer") Dealer dealer) {
+			String s=req.getParameter("street");
+			String c=req.getParameter("city");
+			int p=Integer.parseInt(req.getParameter("pincode"));
+			
+			Address a=new Address();
+			a.setStreet(s);
+			a.setCity(c);
+			a.setPincode(p);
+			
+			dealer.setAddress(a);
+			a.setDealer(dealer);
+			
+			lservice.saveDealer(dealer); // interacts with service layer for db logic implementation
+			return "index";
+		}
+}

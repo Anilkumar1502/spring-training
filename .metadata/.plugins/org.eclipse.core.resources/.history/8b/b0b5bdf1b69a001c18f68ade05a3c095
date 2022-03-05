@@ -1,0 +1,33 @@
+package com.bel.training.ims.model;
+
+import java.sql.Date;
+
+public class DealerAddress {
+
+	private Long id;
+	private String email;
+	private String fname;
+	private String lname;
+	private String password;
+	private Date dob;
+	private String phoneNo;
+	private String street;
+	private String city;
+	private int pincode;
+	public DealerAddress(Long id, String email, String fname, String lname, String password, Date dob, String phoneNo,
+			String street, String city, int pincode) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.fname = fname;
+		this.lname = lname;
+		this.password = password;
+		this.dob = dob;
+		this.phoneNo = phoneNo;
+		this.street = street;
+		this.city = city;
+		this.pincode = pincode;
+	}
+	
+	
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="spring-code"/>
+<aop-project name="Inventory"/>
+<aop-project name="spring-web"/>
+<aop-project name="helloWorld"/>
+</aop-reference-model>

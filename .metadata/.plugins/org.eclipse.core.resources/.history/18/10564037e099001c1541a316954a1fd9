@@ -1,0 +1,15 @@
+package com.bel.training.controller;
+
+import com.bel.training.model.Employee;
+
+@Controller
+public class EmployeeController{
+
+	// model is used to pass data/object to view
+		@RequestMapping("/employeeForm")
+		public String showFormForAdd(Model theModel) {
+			Employee theEmp = new Employee();
+			theModel.addAttribute("emp", theEmp);
+			return "registerEmployee"; //View with emp obj
+
+}

@@ -1,0 +1,25 @@
+package com.bel.training.ims.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.bel.training.ims.model.Dealer;
+
+@Controller
+public class LoginController {
+
+	@RequestMapping("/")
+	public String viewHomePage() {
+	        
+	    return "index";
+	}
+	
+	// Request --> Controller ---> Response(views- jsp)
+		@RequestMapping("/register")
+		public String viewRegisterPage(Model model) {
+			 Dealer dealer = new Dealer();
+			    model.addAttribute("dealer", dealer);
+			      return "register"; //model+view   
+		}
+}

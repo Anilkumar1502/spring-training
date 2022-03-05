@@ -1,0 +1,7 @@
+package com.bel.training.controller;
+
+
+@Controller
+public class HelloWorldController{
+
+}

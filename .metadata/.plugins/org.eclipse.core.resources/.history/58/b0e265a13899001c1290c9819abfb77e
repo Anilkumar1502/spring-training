@@ -1,0 +1,19 @@
+package com.bel.training.spring_code;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * Hello world!
+ *
+ */
+public class BookApp 
+{
+    public static void main( String[] args )
+    {
+    	ApplicationContext appCon=new ClassPathXmlApplicationContext("BookConfig.xml");
+    	Employee factory =(Employee)appCon.getBean("book");
+    	factory.display();
+    	((ClassPathXmlApplicationContext) appCon).close();
+    }
+}

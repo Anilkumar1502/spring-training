@@ -1,0 +1,33 @@
+package com.bel.training.spring_code;
+
+public class Employee{
+	
+String city;
+String name;
+String i;
+public String getId() {
+	return i;
+}
+public void setId(String i) {
+	this.i = i;
+}
+public String getCity() {
+	return city;
+}
+public void setCity(String city) {
+	this.city = city;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+
+
+
+public void display() {
+	// TODO Auto-generated method stub
+	System.out.println("Name:"+name+" "+"City: "+city+id);
+}
+}

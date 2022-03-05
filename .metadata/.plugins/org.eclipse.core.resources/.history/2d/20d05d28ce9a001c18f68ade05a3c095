@@ -1,0 +1,19 @@
+package com.bel.training.ims;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+
+@Configuration
+@EnableSwagger3
+public class SwaggerConfig {
+	//creating bean  
+		@Bean  
+		public Docket api()  
+		{  
+		//creating constructor of Docket class that accepts parameter DocumentationType  
+		return new Docket(DocumentationType.SWAGGER_3);  
+		}
+}
